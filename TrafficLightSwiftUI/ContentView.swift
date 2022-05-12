@@ -13,24 +13,17 @@ struct ContentView: View {
     @State private var yellowValue = 0.3
     @State private var greenValue = 0.3
     @State private var currentLight = CurrentLight.red
+    
     var body: some View {
-        
         VStack {
-            Circle()
+            CircleView()
                 .foregroundColor(.red.opacity(redValue))
-                .frame(width: 120, height: 120)
-                .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                .shadow(radius: 10)
-            Circle()
+            
+            CircleView()
                 .foregroundColor(.yellow.opacity(yellowValue))
-                .frame(width: 120, height: 120)
-                .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                .shadow(radius: 10)
-            Circle()
+            
+            CircleView()
                 .foregroundColor(.green.opacity(greenValue))
-                .frame(width: 120, height: 120)
-                .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                .shadow(radius: 10)
             Spacer()
             Button(action: buttonPressed) {
                 Text(text)
@@ -40,11 +33,17 @@ struct ContentView: View {
             }
         }
         .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
-        
     }
-    
+
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
+    }
+}
+
+extension ContentView {
     func buttonPressed() -> Void {
-        
         text = "NEXT"
         
         switch currentLight {
@@ -62,14 +61,8 @@ struct ContentView: View {
             currentLight = .red
         }
     }
+    
     enum CurrentLight {
         case red, yellow, green
     }
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
-    }
 }
-

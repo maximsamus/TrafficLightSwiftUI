@@ -11,6 +11,7 @@
 		F717194F282D246A00A686E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F717194E282D246A00A686E3 /* ContentView.swift */; };
 		F7171951282D246B00A686E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7171950282D246B00A686E3 /* Assets.xcassets */; };
 		F7171954282D246B00A686E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7171953282D246B00A686E3 /* Preview Assets.xcassets */; };
+		F7171963282D667700A686E3 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7171962282D667700A686E3 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F717194E282D246A00A686E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F7171950282D246B00A686E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7171953282D246B00A686E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7171962282D667700A686E3 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				F717194C282D246A00A686E3 /* TrafficLightSwiftUIApp.swift */,
 				F717194E282D246A00A686E3 /* ContentView.swift */,
+				F7171962282D667700A686E3 /* CircleView.swift */,
 				F7171950282D246B00A686E3 /* Assets.xcassets */,
 				F7171952282D246B00A686E3 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7171963282D667700A686E3 /* CircleView.swift in Sources */,
 				F717194F282D246A00A686E3 /* ContentView.swift in Sources */,
 				F717194D282D246A00A686E3 /* TrafficLightSwiftUIApp.swift in Sources */,
 			);
