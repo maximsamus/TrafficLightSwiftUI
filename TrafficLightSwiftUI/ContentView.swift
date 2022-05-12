@@ -19,23 +19,32 @@ struct ContentView: View {
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
-            VStack {
+            VStack(spacing: 25) {
                 CircleView()
                     .foregroundColor(.red.opacity(redValue))
-                
                 CircleView()
                     .foregroundColor(.yellow.opacity(yellowValue))
-                
                 CircleView()
                     .foregroundColor(.green.opacity(greenValue))
                 Spacer()
-                Button(action: buttonPressed) {
-                    Text(text)
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .background(.blue)
+                ZStack {
+                    Rectangle()
+                        .frame(width: 200, height: 60)
+                        .foregroundColor(.blue)
                         .clipShape(Capsule())
-                        .padding()
+                        .overlay(Capsule().stroke(Color.white, lineWidth: 4))
+                        .shadow(radius: 10)
+                    Button(action: buttonPressed) {
+                        Text(text)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .background(.blue)
+                            .clipShape(Capsule())
+                            .buttonStyle(.bordered)
+                            .buttonBorderShape(.roundedRectangle(radius: 100))
+                        
+                    }
                 }
             }
             .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
