@@ -15,7 +15,6 @@ struct ContentView: View {
     @State private var currentLight = CurrentLight.red
     
     var body: some View {
-        
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
@@ -32,29 +31,31 @@ struct ContentView: View {
                         .frame(width: 200, height: 60)
                         .foregroundColor(.blue)
                         .clipShape(Capsule())
-                        .overlay(Capsule().stroke(Color.white, lineWidth: 4))
+                        .overlay(Capsule().stroke(
+                            Color.white, lineWidth: 4)
+                        )
                         .shadow(radius: 10)
                     Button(action: buttonPressed) {
                         Text(text)
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
-                            .background(.blue)
-                            .clipShape(Capsule())
-                            .buttonStyle(.bordered)
-                            .buttonBorderShape(.roundedRectangle(radius: 100))
-                        
                     }
                 }
             }
-            .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
+            .padding(EdgeInsets(
+                top: 20,
+                leading: 0,
+                bottom: 20,
+                trailing: 0)
+            )
         }
     }
+}
 
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
 

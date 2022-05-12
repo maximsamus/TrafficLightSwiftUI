@@ -14,10 +14,10 @@ struct CircleView: View {
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 10)
     }
-    
-    struct CircleView_Previews: PreviewProvider {
-        static var previews: some View {
-            CircleView()
-        }
+}
+
+struct CircleView_Previews: PreviewProvider {
+    static var previews: some View {
+        CircleView()
     }
 }
