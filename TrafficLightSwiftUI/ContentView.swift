@@ -15,24 +15,31 @@ struct ContentView: View {
     @State private var currentLight = CurrentLight.red
     
     var body: some View {
-        VStack {
-            CircleView()
-                .foregroundColor(.red.opacity(redValue))
-            
-            CircleView()
-                .foregroundColor(.yellow.opacity(yellowValue))
-            
-            CircleView()
-                .foregroundColor(.green.opacity(greenValue))
-            Spacer()
-            Button(action: buttonPressed) {
-                Text(text)
-                    .font(.title)
-                    .foregroundColor(.white)
-                    .background(.blue)
+        
+        ZStack {
+            Color(.black)
+                .ignoresSafeArea()
+            VStack {
+                CircleView()
+                    .foregroundColor(.red.opacity(redValue))
+                
+                CircleView()
+                    .foregroundColor(.yellow.opacity(yellowValue))
+                
+                CircleView()
+                    .foregroundColor(.green.opacity(greenValue))
+                Spacer()
+                Button(action: buttonPressed) {
+                    Text(text)
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .background(.blue)
+                        .clipShape(Capsule())
+                        .padding()
+                }
             }
+            .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
         }
-        .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
     }
 
     struct ContentView_Previews: PreviewProvider {
